@@ -1,0 +1,1 @@
+<div class="alert alert-danger"><b>Error:</b> No tiene privilegios para usar esta función; si los requiere, pongase en contacto con el adminmistrador del sistema para promover su cuenta.</div>

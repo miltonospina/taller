@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highcharts Example</title>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js?.org"></script>
+		<style type="text/css">
+#container {
+	height: 600px; 
+	min-width: 800px; 
+	max-width: 800px;
+	margin: 0 auto;
+}
+		</style>
+		<script type="text/javascript">
+$(function () {
+
+    // Give the points a 3D feel by adding a radial gradient
+    Highcharts.getOptions().colors = $.map(Highcharts.getOptions().colors, function (color) {
+        return {
+            radialGradient: {
+                cx: 0.4,
+                cy: 0.3,
+                r: 0.5
+            },
+            stops: [
+                [0, color],
+                [1, Highcharts.Color(color).brighten(-0.2).get('rgb')]
+            ]
+        };
+    });
+
+    // Set up the chart
+    var chart = new Highcharts.Chart({
+        chart: {
+            renderTo: 'container',
+            margin: 100,
+            type: 'scatter',
+            options3d: {
+                enabled: true,
+                alpha: 10,
+                beta: 30,
+                depth: 250,
+                viewDistance: 5,
+
+                frame: {
+                    bottom: { size: 1, color: 'rgba(0,0,0,0.02)' },
+                    back: { size: 1, color: 'rgba(0,0,0,0.04)' },
+                    side: { size: 1, color: 'rgba(0,0,0,0.06)' }
+                }
+            }
+        },
+        title: {
+            text: 'Draggable box'
+        },
+        subtitle: {
+            text: 'Click and drag the plot area to rotate in space'
+        },
+        plotOptions: {
+            scatter: {
+                width: 10,
+                height: 10,
+                depth: 10
+            }
+        },
+       
+        xAxis: {
+            min: 0,
+            max: 13000,
+            gridLineWidth: 1
+        },
+		 yAxis: {
+            min: 0,
+            max: 130000,
+            title: null
+        },
+        zAxis: {
+            min: 0,
+            max: 31
+        },
+        legend: {
+            enabled: false
+        },
+        series: [
+			{
+            name: 'Enero',
+            colorByPoint: false,
+            data: [
+				[3340,39557,1],
+[9920,104640,2],
+[10461,112320,3],
+[9263,119160,4],
+[10017,122560,5],
+[9649,115520,6],
+[8855,110800,7],
+[10966,118480,8],
+[10742,118000,9],
+[8652,89128,10],
+[563,74128,11],
+[0,17000,12],
+[0,16200,13],
+[0,6600,14],
+[0,4400,15],
+[0,4400,16],
+[0,4400,17],
+[0,5400,18],
+[3160,28330,19],
+[8432,98800,20],
+[9389,112400,21],
+[10148,122000,22],
+[9881,115800,23],
+[9721,121720,24],
+[10994,124920,25],
+[10765,126320,26],
+[9494,121520,27],
+[10486,122640,28],
+[11044,125040,29],
+[10608,116568,30],
+[9882,117528,31],
+
+				] 
+			},
+			{
+            name: 'Febrero',
+            colorByPoint: false,
+            data: [
+				[8947,119568,1],
+[9704,114608,2],
+[10708,119648,3],
+[10375,120000,4],
+[10837,116000,5],
+[10348,117520,6],
+[10668,125800,7],
+[10837,116800,8],
+[10211,115800,9],
+[9476,113280,10],
+[10614,121800,11],
+[10286,117128,12],
+[9905,125448,13],
+[10681,114648,14],
+[11182,119848,15],
+[11047,122680,16],
+[9703,116520,17],
+
+
+				] 
+			},
+			{
+            name: 'Diciembre 2014',
+            colorByPoint: false,
+            data: [
+				[95128,8422,1],
+[8422,95128,1],
+[9793,109328,2],
+[9841,115400,3],
+[8605,95928,4],
+[9228,119528,5],
+[9532,106800,6],
+[8163,110600,7],
+[4103,69800,8],
+[5518,92000,9],
+[4830,73480,10],
+[4612,69200,11],
+[5240,82600,12],
+[2994,45000,13],
+[1580,32800,14],
+[3988,64200,15],
+[7489,82400,16],
+[8482,103000,17],
+[9184,101400,18],
+[9126,100208,19],
+[10146,109328,20],
+[10641,108400,21],
+[8693,110080,22],
+[10242,106728,23],
+[9897,100528,24],
+[8880,98128,25],
+[9470,111128,26],
+[9867,117480,27],
+[8271,107920,28],
+[8433,104720,29],
+[10021,105320,30],
+[0,22820,31],
+
+
+
+				] 
+			},
+			{
+            name: 'Noviembre 2014',
+            colorByPoint: false,
+            data: [
+				[111400,8568,1],
+[8568,111400,1],
+[7329,96000,2],
+[9204,98800,3],
+[7966,94600,4],
+[9297,120400,5],
+[10306,116600,6],
+[9398,114128,7],
+[10186,108128,8],
+[8819,113128,9],
+[5603,90400,10],
+[3527,76128,11],
+[1783,41600,12],
+[4435,67048,13],
+[5065,64048,14],
+[8661,101560,15],
+[7359,93600,16],
+[4921,62480,17],
+[5135,57800,18],
+[2805,73320,19],
+[4056,76200,20],
+[3304,54200,21],
+[3453,34200,22],
+[3229,35200,23],
+[8258,102400,24],
+[8649,110400,25],
+[8241,109400,26],
+[8069,99600,27],
+[9677,112000,28],
+[10086,119000,29],
+[8866,111128,30],
+
+
+
+				] 
+			},
+			]
+    });
+
+
+    // Add mouse events for rotation
+    $(chart.container).bind('mousedown.hc touchstart.hc', function (e) {
+        e = chart.pointer.normalize(e);
+
+        var posX = e.pageX,
+            posY = e.pageY,
+            alpha = chart.options.chart.options3d.alpha,
+            beta = chart.options.chart.options3d.beta,
+            newAlpha,
+            newBeta,
+            sensitivity = 5; // lower is more sensitive
+
+        $(document).bind({
+            'mousemove.hc touchdrag.hc': function (e) {
+                // Run beta
+                newBeta = beta + (posX - e.pageX) / sensitivity;
+                newBeta = Math.min(100, Math.max(-100, newBeta));
+                chart.options.chart.options3d.beta = newBeta;
+
+                // Run alpha
+                newAlpha = alpha + (e.pageY - posY) / sensitivity;
+                newAlpha = Math.min(100, Math.max(-100, newAlpha));
+                chart.options.chart.options3d.alpha = newAlpha;
+
+                chart.redraw(false);
+            },                            
+            'mouseup touchend': function () { 
+                $(document).unbind('.hc');
+            }
+        });
+    });
+    
+});
+		</script>
+	</head>
+	<body>
+
+<script src="../../js/highcharts.js"></script>
+<script src="../../js/highcharts-3d.js"></script>
+<script src="../../js/modules/exporting.js"></script>
+
+<div id="container" style="height: 800px"></div>
+	</body>
+</html>
