@@ -11,7 +11,7 @@
 			animacion: "#ajaxLoadAni",
 			columnas: Array(
 				"<td>{codigo}</td>",
-				"<td>{nombre}</td>",
+				"<td>{nombrxxxe}</td>",
 				"<td class='action col-md-2'><div class='text-center'>"+
 				"<a href='productos/gestion_productos/ver_detalle/{codigo}' class='edit btn btn-outline btn-info btn-sm' ><i class='fa fa-eye'/></a> "+
 				"<a href='#modal-eliminar-producto' class='edit btn btn-outline btn-warning btn-sm' data-toggle='modal' data-target='#modal-editar-producto' data-codigo='{codigo}' data-nombre='{nombre}'><i class='fa fa-pencil'/></a> "+
@@ -70,14 +70,18 @@
 		<div class="modal-content modal-primary">
 			<div class="modal-header modal-heading">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title" id="myModalLabel">Crear nueva producto</h4>
+				<h4 class="modal-title" id="myModalLabel">Crear nuevo producto</h4>
 			</div>
 			<div class="modal-body">
 				<div class="row">
 					<form role="form" method="post" action="productos/gestion_productos/insertar" id="formulario-crear-producto">
-						<div class="form-group col-lg-6">
-							<label>Nombre de la producto de producto</label>
-							<input class="form-control" placeholder="Nombre de la producto de producto" name="nombre">
+						<div class="form-group col-lg-12">
+							<label>Nombre de la referencia de producto</label>
+							<input class="form-control" placeholder="Nombre de la referencia de producto" name="nombre">
+						</div>
+						<div class="form-group col-lg-12">
+							<label>Clase de producto</label>
+							<select class="form-control"  placeholder="Clase de producto" name="clase">
 						</div>
 					</form>
 			</div>
@@ -108,7 +112,7 @@
 			</div>
 				<div class="modal-body">
 				<div class="row">
-					<p class="text-center">¿Está seguro de eliminar la producto: <strong id="nombre-producto-eliminar" class="text-danger"></strong> ?<p>
+					<p class="text-center">¿Está seguro de eliminar la referencia producto: <strong id="nombre-producto-eliminar" class="text-danger"></strong> ?<p>
 					<form role="form" method="post" action="productos/gestion_productos/eliminar" id="formulario-eliminar-producto">
 						<input type="hidden" id="codigo-producto-eliminar" name="codigo" value=""/>
 					</form>

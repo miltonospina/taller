@@ -129,7 +129,7 @@ class Producto extends CI_Model {
 				$this->clase->codigo=$row->clase;
 				$this->clase->cargar();
 
-				$this->atributos=clone $this->clase->atributos;
+				//$this->atributos=clone $this->clase->atributos;
 				$this->atributos=unserialize($row->atributos);
 
 
